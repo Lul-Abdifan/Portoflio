@@ -7,6 +7,7 @@ import {
   SiVercel,
   SiRender,
   SiLinux,
+  SiJest,
   SiTestinglibrary
 } from "react-icons/si";
 
@@ -25,7 +26,9 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiTestinglibrary />
       </Col>
-      
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJest />
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiSlack />
       </Col>
@@ -35,6 +38,7 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiRender />
       </Col>
+     
       
     </Row>
   );
