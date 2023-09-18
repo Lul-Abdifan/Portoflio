@@ -13,8 +13,7 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Row>
-       
-        <Col md="6" className="footer-copywright">
+    <Col md="6" className="footer-copywright">
           <h3>Copyright © {year} SB</h3>
         </Col>
         <Col md="6" className="footer-body">
@@ -52,7 +51,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://t.me/tasanbannu2025"
+             href="https://t.me/tasanbannu2025"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
