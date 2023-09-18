@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import FloatingLabel from "react-bootstrap";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 const ContactMe = () => {
     return ( 

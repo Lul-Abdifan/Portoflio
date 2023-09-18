@@ -5,9 +5,7 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiPython,
   DiGit,
-  DiJava,
 } from "react-icons/di";
 import {
   SiMysql,
