@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';import Form from 'react-bootstrap/Form';
 const ContactMe = () => {
     return ( 
     <div>
@@ -8,20 +7,23 @@ const ContactMe = () => {
 
 
         <p >
-   I'm always interested in hearing about new projects, 
+   I'm always interested in hearing about new projects, <br/>
     so if you'd like to chat please get in touch.
    </p>
-   <FloatingLabel
-        controlId="floatingInput"
-        label="Email address"
-        className="mb-3"
-      >
-        <Form.Control type="email" placeholder="name@example.com" />
-      </FloatingLabel>
-      <FloatingLabel controlId="floatingPassword" label="Password">
-        <Form.Control type="password" placeholder="Password" />
-      </FloatingLabel>
-
+<div className="d-flex justify-content-center">
+ <Form className="m-3">
+ <Form.Group className="m-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="text" placeholder="Full Name" className="custom-input"/>
+      </Form.Group>
+      <Form.Group className="m-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="email" placeholder="name@example.com" className="custom-input"/>
+      </Form.Group>
+      <Form.Group className="m-3 custom-input" controlId="exampleForm.ControlTextarea1">
+        <Form.Control as="textarea" rows={3}  placeholder="I value your message or connection"/>
+      </Form.Group>
+         <Button className="m-5" variant="outline-primary">Get In Touch</Button>{' '}
+    </Form>
+</div>
         </Container>
   
     </div> );
