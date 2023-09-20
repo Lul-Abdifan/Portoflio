@@ -16,7 +16,7 @@ const ContactMe = () => {
         <Form.Control type="text" placeholder="Full Name" className="custom-input"/>
       </Form.Group>
       <Form.Group className="m-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="email" placeholder="name@example.com" className="custom-input"/>
+        <Form.Control type="email" placeholder="Email" className="custom-input"/>
       </Form.Group>
       <Form.Group className="m-3 custom-input" controlId="exampleForm.ControlTextarea1">
         <Form.Control as="textarea" rows={3}  placeholder="I value your message or connection"/>

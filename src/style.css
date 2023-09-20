@@ -598,6 +598,9 @@ button:focus {
   .about-img {
     padding-top: 0 !important;
   }
+  .custom-input{
+    max-width: 400px;
+  }
 }
 /* --------- */
 /* Resume */
