@@ -5,13 +5,16 @@ import Form from 'react-bootstrap/Form';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+
+
 const ContactMe = () => {
     const form = useRef();
-
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+     const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
   const handleSubmit =(event)=>{
     event.preventDefault();
-   
-    emailjs.sendForm('service_oqbule6', 'template_l2ieuyr', form.current, 'FuY6JiM2W-I_CiDzj')
+    emailjs.sendForm(serviceId, templateId, form.current, apiKey)
     .then((result) => {
         console.log(result.text);
     }, (error) => {
