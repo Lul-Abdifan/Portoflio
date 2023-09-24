@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ContactMe = () => {
@@ -20,12 +20,13 @@ const ContactMe = () => {
      const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
  const handleChange =(event)=>{
   const {name,value} = event.target
-  console.log(name,value);
+
  setData({...data,[name]:value})
  }
 
   const handleSubmit =(event)=>{
     event.preventDefault();
+
     setData({
       message:'',
       from_name:'',
@@ -33,9 +34,8 @@ const ContactMe = () => {
     })
     emailjs.sendForm(serviceId, templateId, form.current, apiKey)
     .then((result) => {
-      console.log(result);
-      toast.success("Email sent successfully!", {
-        position: "top-right",
+      
+    toast.success(`${result.text},Thank you for the message,Your message is sent`,{
         autoClose: 3000, 
         hideProgressBar: false,
         closeOnClick: true,
@@ -47,7 +47,7 @@ const ContactMe = () => {
 
     }, (error) => {
         console.log(error.text);
-        toast.error("Oop,Email is not sent!", {
+        toast.error("Oop,The message is not sent!", {
           position: "top-right",
           autoClose: 3000, 
           hideProgressBar: false,
