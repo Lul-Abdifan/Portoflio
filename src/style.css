@@ -84,6 +84,7 @@ button:focus {
 
 .navbar {
   position: fixed !important;
+  /* bottom: 0; */
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -398,10 +399,9 @@ button:focus {
   color: #700c86 !important;
 }
 
-/* --------- */
-/* Footer */
-/* --------- */
 .footer {
+  position: fixed;
+  bottom: 0;
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
@@ -608,9 +608,8 @@ button:focus {
 
 .contact-section, .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  padding-top: 10%;
+
   color: white !important;
 }
 
