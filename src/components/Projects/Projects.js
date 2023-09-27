@@ -78,7 +78,7 @@ function Projects() {
               imgPath={leaderboard}
               isBlog={false}
               title="AfriConference AI"
-              description="The website for the First Pan African Conference on Artificial Intelligence includes a home page with its location and description, aswellas information about artificial intelligence.The website also features program demonstrations and sponsorship details."
+              description="The website for the First Pan African Conference on Artificial Intelligence includes a home page with its location and description, as well as information about artificial intelligence.The website also features program demonstrations and sponsorship details."
               ghLink="https://github.com/Lul-Abdifan/Capstone-Project1"
               demoLink="https://lul-abdifan.github.io/Capstone-Project1/"
             />
