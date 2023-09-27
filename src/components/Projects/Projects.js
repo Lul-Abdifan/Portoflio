@@ -2,13 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import leaderboard from "../../Assets/Images/leaderboard-full-page.png"
+import bookstore from "../../Assets/Images/bookstore.jpeg"
 import seeFood from "../../Assets/Images/SeaFood.gif"
+import spaceTravel from "../../Assets/Images/rocketmission01.jpeg"
 
 function Projects() {
   return (
@@ -21,73 +18,73 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+       
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={seeFood}
+              isBlog={false}
+              title="Doctor Appointment"
+              description="A website offers a user-friendly platform for patients to register, log in, set appointments, check doctor profiles, and manage their appointments. Admins can effortlessly add or delete doctors and monitor the platform, ensuring seamless healthcare access and efficient management"
+              ghLink="https://github.com/Lul-Abdifan/JS-Capstone"
+              demoLink="https://abeltsew.github.io/JS-Capstone/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={seeFood}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="MealHub"
+              description="The meal website utilizes an API to gather meal data and provides interactive features such as liking and commenting on meals. Additionally, the website includes a pop-up function that displays ingredient and amount details of the selected meal."
+              ghLink="https://github.com/Lul-Abdifan/JS-Capstone"
+              demoLink="https://abeltsew.github.io/JS-Capstone/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={spaceTravel}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Space Travellers"
+              description="This web application is designed for a company specializing in commercial and scientific space travel services. It seamlessly integrates with the SpaceX API, retrieving real-time data, and enables users to reserve rockets and participate in curated space missions."
+              ghLink="https://github.com/Lul-Abdifan/Space-travellers-Hub"
+              demoLink="https://space-hub-9gkl.onrender.com/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={bookstore}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Bookstore"
+              description="Bookstore website allows users to add books by author , title and category on an API. Users can leave comments on books they have read, edit or delete their comments,"
+              ghLink="https://github.com/Lul-Abdifan/Bookstore"
+              demoLink="https://bookstore-redux-s5uw.onrender.com/"              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={leaderboard}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Leaderboard"
+              description="Leaderboard games are competitive games where players aim for the top spot on a public leaderboard by completing tasks and earning points."
+              ghLink="https://github.com/Lul-Abdifan/Leaderboard"
+              demoLink="https://lul-abdifan.github.io/Leaderboard/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaderboard}
+              isBlog={false}
+              title="AfriConference AI"
+              description="The website for the First Pan African Conference on Artificial Intelligence includes a home page with its location and description, aswellas information about artificial intelligence.The website also features program demonstrations and sponsorship details."
+              ghLink="https://github.com/Lul-Abdifan/Capstone-Project1"
+              demoLink="https://lul-abdifan.github.io/Capstone-Project1/"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+         
         </Row>
       </Container>
     </Container>
