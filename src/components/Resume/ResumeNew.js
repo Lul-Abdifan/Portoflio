@@ -1,8 +1,31 @@
+import React from "react";
+
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import pdfFile from "../../Assets/resume.pdf"
+function ResumeNew() {
+  return (
+    <div className="resume">
+      
+      <Document file={pdfFile}>
+                <Page pageNumber={1} />
+                <Page pageNumber={2}/>
+            </Document>
+    </div>
+  );
+}
+
+export default ResumeNew;
+
+
+
+
+
 // import React, { useState, useEffect } from "react";
 // import { Container, Row } from "react-bootstrap";
 // import Button from "react-bootstrap/Button";
 // import Particle from "../Particle";
-// import pdf from "../../Assets/../Assets/Soumyajit_Behera-BIT_MESRA.pdf";
+// import pdf from "../../Assets/../Assets/resume.pdf";
 // import { AiOutlineDownload } from "react-icons/ai";
 // import { Document, Page, pdfjs } from "react-pdf";
 // import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -27,7 +50,7 @@
 //             style={{ maxWidth: "250px" }}
 //           >
 //             <AiOutlineDownload />
-//             &nbsp;Download CV
+//             &nbsp;Download CV 
 //           </Button>
 //         </Row>
 
