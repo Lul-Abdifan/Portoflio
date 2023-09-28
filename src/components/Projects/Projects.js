@@ -6,6 +6,8 @@ import leaderboard from "../../Assets/Images/leaderboard-full-page.png"
 import bookstore from "../../Assets/Images/bookstore.jpeg"
 import seeFood from "../../Assets/Images/SeaFood.gif"
 import spaceTravel from "../../Assets/Images/rocketmission01.jpeg"
+import aiconference from "../../Assets/Images/africonference.PNG"
+
 
 function Projects() {
   return (
@@ -75,7 +77,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaderboard}
+              imgPath={aiconference}
               isBlog={false}
               title="AfriConference AI"
               description="The website for the First Pan African Conference on Artificial Intelligence includes a home page with its location and description, as well as information about artificial intelligence.The website also features program demonstrations and sponsorship details."
