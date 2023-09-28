@@ -619,27 +619,33 @@ button:focus {
 
   color: white !important;
 }
+.resume-content{
+  
+  /* margin:0px auto; */
+  margin-top:100px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+
+}
+.resume-content Button {
+  margin-left:50px;
+  height: 50px;
+  width:200px;
+}
 
 .resume {
  display:flex;
- justify-content: center;
-  border-radius: 15px;
+ justify-content: space-around;
+ align-items: center;
+   border-radius: 15px;
   width: 100%; 
   max-width: 800px; 
-  margin: 100px auto;
+  margin:0 auto;
   border: 1px solid #ddd; 
-  padding: 20px; 
+  padding-bottom: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: rgb(246, 241, 232);
-}
-
-
-.resume-left {
-  padding-right: 80px !important;
-}
-
-.resume-right {
-  padding-left: 80px !important;
 }
 
 @media (max-width: 767px) {
