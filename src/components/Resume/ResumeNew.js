@@ -4,16 +4,25 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import pdfFile from "../../Assets/resume.pdf"
 function ResumeNew() {
-  const onButtonClick = () => {
-    fetch('resume').then(response => {
-        response.blob().then(blob => {
-            const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'resume'
-            alink.click();
-        })
-    })
+  const onButtonClick =async () => {
+    try{
+      const response = await fetch('hope_resume.pdf')
+
+      if(!response.ok)
+      {
+        throw new Error("Failed to fetch PDF");
+      }
+      const blob = await response.blob();
+      const fileURL = URL.createObjectURL(blob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = fileURL;
+      downloadLink.download = 'hope_resume.pdf';
+      downloadLink.click();
+      URL.revokeObjectURL(fileURL);
+    }
+    catch(error){
+      return error;
+    }
 }
   return (
    <div className="resume-content">
