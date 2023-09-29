@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Typewriter from "typewriter-effect";
 
 const ContactMe = () => {
   const [data,setData]=useState({
@@ -41,9 +41,6 @@ const ContactMe = () => {
         closeOnClick: true,
         pauseOnHover: true,
       })
-     
-    
-
 
     }, (error) => {
         console.log(error.text);
@@ -59,7 +56,26 @@ const ContactMe = () => {
   
 
     return ( 
-    <div>
+    <div className="contact">
+      <Container fluid className="contact-section">
+        <h1> Services I <span className="purple">provide</span></h1>
+        <br/>
+        <br/>
+        <Typewriter
+      options={{
+        strings: [
+          "->  Development",
+          "->  Testing",
+          "->  Debugging",
+          "->  Deployment",
+        ],
+        autoStart: true,
+        loop: true,
+        deleteSpeed: 100,
+      }}
+    />
+      </Container>
+      
         <Container fluid className="contact-section">
           <p >
    I'm always interested in hearing about new projects, <br/>
@@ -73,9 +89,7 @@ const ContactMe = () => {
       <Form.Group className="m-3" controlId="exampleForm.ControlInput1">
         <Form.Control type="email" name="from_email" placeholder="Email" required className="custom-input" value={data.from_email} onChange={handleChange}/>
       </Form.Group>
-     
-
-      <Form.Group className="m-3 custom-input" controlId="exampleForm.ControlTextarea1">
+           <Form.Group className="m-3 custom-input" controlId="exampleForm.ControlTextarea1">
        <Form.Control name="message" as="textarea" rows={3} required value={data.message} placeholder="I value your message or connection" onChange={handleChange}/>
       </Form.Group>
          <Button type="submit" className="m-5" variant="outline-primary" required>Get In Touch</Button>{' '}

@@ -605,21 +605,27 @@ button:focus {
   }
   .custom-input{
     max-width: 400px;
+    /* margin: 30px; */
   }
 }
 /* --------- */
 /* Resume */
 /* --------- */
-
+.contact{
+  display: flex;
+  justify-content: space-evenly;
+}
 .contact-section, .resume-section {
   position: relative !important;
-  padding-top: 10%;
+  padding-top: 5%;
 
-  color: white !important;
+  /* color: white !important; */
 }
 
 .contact-section{
-  margin:100px auto;
+margin-top:70px;
+margin-bottom: 120px;
+color: white;
 }
 .resume-content{
   
@@ -651,6 +657,10 @@ button:focus {
 }
 
 @media (max-width: 767px) {
+  .contact{
+    display: flex;
+    flex-direction: column;
+  }
   .resume-content{
     display: flex !important;
     flex-direction: column;
@@ -664,9 +674,6 @@ button:focus {
 
 
 }
-
-
-
 
 
 .like-item {
@@ -705,7 +712,7 @@ button:focus {
 }
 /* contact user */
 .custom-input{
-width: 400px;
-  display: flex !important;
-  justify-content: center;
+  height: 60px;
+width: 600px;
+margin-bottom:30px;
 }
