@@ -30,6 +30,7 @@ function Projects() {
               description="A website offers a user-friendly platform for patients to register, log in, set appointments, check doctor profiles, and manage their appointments. Admins can effortlessly add or delete doctors and monitor the platform, ensuring seamless healthcare access and efficient management"
               ghLink="https://github.com/Lul-Abdifan/JS-Capstone"
               demoLink="https://abeltsew.github.io/JS-Capstone/"
+              
             />
           </Col>
           <Col md={4} className="project-card">
