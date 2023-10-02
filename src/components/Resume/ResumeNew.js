@@ -2,7 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import pdfFile from "../../Assets/resume.pdf"
+import pdfFile from "../../Assets/abdi_resume.pdf"
 function ResumeNew() {
   const onButtonClick =async () => {
     try{

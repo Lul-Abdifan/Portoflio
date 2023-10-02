@@ -22,7 +22,7 @@ function Projects() {
         </p>
        
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-        <Col md={4} className="project-card">
+        {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={seeFood}
               isBlog={false}
@@ -32,7 +32,7 @@ function Projects() {
               demoLink="https://abeltsew.github.io/JS-Capstone/"
               
             />
-          </Col>
+          </Col> */}
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={seeFood}
