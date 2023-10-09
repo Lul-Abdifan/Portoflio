@@ -1,4 +1,4 @@
-
+import ReCAPTCHA from "react-google-recaptcha";
 import { Container } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -8,16 +8,24 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Typewriter from "typewriter-effect";
 
+
+
 const ContactMe = () => {
   const [data,setData]=useState({
     message:'',
     from_name:'',
     from_email:''
   })
+  const [recaptch,setRecaptch]=useState(null)
     const form = useRef();
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
      const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
+     const sitekeyip = process.env.REACT_APP_RECAPTCH_KEY;
+
+     function onChange(value) {
+      setRecaptch(value)
+    }
  const handleChange =(event)=>{
   const {name,value} = event.target
 
@@ -83,6 +91,7 @@ const ContactMe = () => {
    </p>
 <div className="d-flex justify-content-center">
 <Form className="m-3" ref={form} onSubmit={handleSubmit}>
+
  <Form.Group className="m-3" controlId="exampleForm.ControlInput1">
         <Form.Control type="text" name="from_name" placeholder="Full Name" className="custom-input" value={data.from_name} onChange={handleChange}/>
       </Form.Group>
@@ -92,7 +101,14 @@ const ContactMe = () => {
            <Form.Group className="m-3 custom-input" controlId="exampleForm.ControlTextarea1">
        <Form.Control name="message" as="textarea" rows={3} required value={data.message} placeholder="I value your message or connection" onChange={handleChange}/>
       </Form.Group>
-         <Button type="submit" className="m-5" variant="outline-primary" required>Get In Touch</Button>{' '}
+      <ReCAPTCHA
+        sitekey={`${sitekeyip}`}
+        style={{ margin: '50px 30px' }}
+    onChange={onChange}
+  />
+
+ <Button type="submit" className="m-5" disabled={!recaptch} variant="outline-primary" required>Get In Touch</Button>{' '}
+
     </Form>
 </div>
         </Container>
