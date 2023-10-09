@@ -103,7 +103,7 @@ const ContactMe = () => {
       </Form.Group>
       <ReCAPTCHA
         sitekey={`${sitekeyip}`}
-        style={{ margin: '50px 30px' }}
+        style={{ margin: '50px 20px' }}
     onChange={onChange}
   />
 
