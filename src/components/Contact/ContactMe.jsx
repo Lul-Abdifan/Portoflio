@@ -22,6 +22,7 @@ const ContactMe = () => {
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
      const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
      const sitekeyip = process.env.REACT_APP_RECAPTCH_KEY;
+     console.log('sitekeyid:',sitekeyip)
 
      function onChange(value) {
       setRecaptch(value)
@@ -43,7 +44,7 @@ const ContactMe = () => {
     emailjs.sendForm(serviceId, templateId, form.current, apiKey)
     .then((result) => {
       
-    toast.success(`${result.text},Thank you for the message,Your message is sent`,{
+    toast.success(`${result.text},Thank you for the message,The message is sent`,{
         autoClose: 3000, 
         hideProgressBar: false,
         closeOnClick: true,
@@ -52,7 +53,7 @@ const ContactMe = () => {
 
     }, (error) => {
         console.log(error.text);
-        toast.error("Oop,The message is not sent!", {
+        toast.error("Oop, The message is not sent!", {
           position: "top-right",
           autoClose: 3000, 
           hideProgressBar: false,
