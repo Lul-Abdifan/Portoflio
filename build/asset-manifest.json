@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d5feb0e.css",
+    "main.js": "/static/js/main.ab86904e.js",
+    "static/js/651.0b12483f.chunk.js": "/static/js/651.0b12483f.chunk.js",
+    "pdf.worker.js": "/cde265b9865f3e759bd45f752b573529.js",
+    "static/media/SeaFood.gif": "/static/media/SeaFood.e36b3ef62729c7ab3d30.gif",
+    "static/media/africonference.PNG": "/static/media/africonference.f77cd30f9e6f793365c5.PNG",
+    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/abdi_resume.pdf": "/static/media/abdi_resume.3eae3140b90b8294c180.pdf",
+    "static/media/leaderboard-full-page.png": "/static/media/leaderboard-full-page.5e7d98e90fc420731b0c.png",
+    "static/media/logo.png": "/static/media/logo.a520462af28458aef97e.png",
+    "static/media/rocketmission01.jpeg": "/static/media/rocketmission01.e93091327531a794b89d.jpeg",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/bookstore.jpeg": "/static/media/bookstore.64d15838785e204ee774.jpeg",
+    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "main.5d5feb0e.css.map": "/static/css/main.5d5feb0e.css.map",
+    "main.ab86904e.js.map": "/static/js/main.ab86904e.js.map",
+    "651.0b12483f.chunk.js.map": "/static/js/651.0b12483f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d5feb0e.css",
+    "static/js/main.ab86904e.js"
+  ]
+}
