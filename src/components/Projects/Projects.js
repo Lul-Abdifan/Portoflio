@@ -7,6 +7,11 @@ import bookstore from "../../Assets/Images/bookstore.jpeg"
 import seeFood from "../../Assets/Images/SeaFood.gif"
 import spaceTravel from "../../Assets/Images/rocketmission01.jpeg"
 import aiconference from "../../Assets/Images/africonference.PNG"
+import adot from "../../Assets/Images/adot.png"
+import ridshare from "../../Assets/Images/rideshare.png"
+import Rateeat from "../../Assets/Images/Rateeat.png"
+import skillbrige from "../../Assets/Images/skillbrige.png"
+import hakimhub from "../../Assets/Images/hakimhub.png"
 
 
 function Projects() {
@@ -43,8 +48,58 @@ function Projects() {
               demoLink="https://abeltsew.github.io/JS-Capstone/"
             />
           </Col>
-
           <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hakimhub}
+              isBlog={false}
+              title="HakimHub"
+              description="is an AI-powered healthcare recommendation platform developed by A2SV interns during the program’s internship phase. It helps users find nearby hospitals and doctors based on their symptoms and provides real-time hospital availability and booking features, ensuring timely access to care. The platform combines intelligent symptom-based recommendations with a user-centric design to improve healthcare accessibility."
+              ghLink="##"
+              demoLink="https://hakimhub.app/"
+            />
+          </Col>
+           
+            <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={skillbrige}
+              isBlog={false}
+              title="SkillBridge"
+              description="is their educational initiative targeting Ethiopian high school and university students preparing for national exams or seeking tech readiness. It uses AI-powered study tools, quizzes, performance tracking, leaderboards—all aligned with the Ethiopian curriculum—and supports exam preparation (Grade 9–12 and higher-ed entrance exams)"
+              ghLink="##"
+              demoLink="https://skillbridge.academy/"
+            />
+          </Col>
+           <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Rateeat}
+              isBlog={false}
+              title="RateEat"
+              description="At RateEat, we're revolutionizing dining by offering an all-in-one platform for authentic food reviews, preordering, and personalized recommendations. Whether you are searching for the perfect meal or planning ahead, RateEat ensures your dining experience is seamless and informed."
+              ghLink="##"
+              demoLink="https://rateeat.app/en"
+            />
+          </Col>
+           <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ridshare}
+              isBlog={false}
+              title="Rideshare"
+              description="Developed and implemented a Rideshare platform landing page for the project, featuring a package pricing system that connects commuters traveling in the same direction to share costs and promote affordable, eco-friendly travel."
+              ghLink="##"
+              demoLink="rideshare.a2sv.org"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={adot}
+              isBlog={false}
+              title="Adot project "
+              description=" Adot is a digital platform designed to support women through pregnancy and motherhood. It offers expert medical advice, real-life stories from other mothers, and personalized recommendations for each milestone. Key features include access to trusted doctors, a community of moms sharing experiences, tailored product suggestions, and a pregnancy milestone tracker. With Adot, expectant and new moms have a reliable companion providing guidance, support, and community throughout their journey."
+              ghLink="##"
+              demoLink="https://adot.life/en"
+            />
+          </Col>
+           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={spaceTravel}
               isBlog={false}
@@ -54,7 +109,6 @@ function Projects() {
               demoLink="https://space-hub-9gkl.onrender.com/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bookstore}
