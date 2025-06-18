@@ -2,13 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaderboard from "../../Assets/Images/leaderboard-full-page.png"
-import bookstore from "../../Assets/Images/bookstore.jpeg"
 import seeFood from "../../Assets/Images/SeaFood.gif"
-import spaceTravel from "../../Assets/Images/rocketmission01.jpeg"
-import aiconference from "../../Assets/Images/africonference.PNG"
 import adot from "../../Assets/Images/adot.png"
-import ridshare from "../../Assets/Images/rideshare.png"
 import Rateeat from "../../Assets/Images/Rateeat.png"
 import skillbrige from "../../Assets/Images/skillbrige.png"
 import hakimhub from "../../Assets/Images/hakimhub.png"
