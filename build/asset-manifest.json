@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3d6e44cf.css",
-    "main.js": "/static/js/main.2ed74f21.js",
+    "main.css": "/static/css/main.1992b60f.css",
+    "main.js": "/static/js/main.bc152e22.js",
     "static/js/651.0b12483f.chunk.js": "/static/js/651.0b12483f.chunk.js",
-    "pdf.worker.js": "/cde265b9865f3e759bd45f752b573529.js",
     "static/media/Akil.png": "/static/media/Akil.15d726020b566d11e97e.png",
     "static/media/SeaFood.gif": "/static/media/SeaFood.e36b3ef62729c7ab3d30.gif",
     "static/media/adot.png": "/static/media/adot.d62635193a12671a920e.png",
@@ -13,18 +12,17 @@
     "static/media/afrochat.png": "/static/media/afrochat.4469b2cec4785eb78dbd.png",
     "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
     "static/media/skillbrige.png": "/static/media/skillbrige.413f02e1675281ce0ea1.png",
-    "static/media/abdi_resume.pdf": "/static/media/abdi_resume.3eae3140b90b8294c180.pdf",
     "static/media/logo.png": "/static/media/logo.a520462af28458aef97e.png",
     "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
     "static/media/avatar.svg": "/static/media/avatar.5852f40fbb38aa284829fa3fb7722225.svg",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "main.3d6e44cf.css.map": "/static/css/main.3d6e44cf.css.map",
-    "main.2ed74f21.js.map": "/static/js/main.2ed74f21.js.map",
+    "main.1992b60f.css.map": "/static/css/main.1992b60f.css.map",
+    "main.bc152e22.js.map": "/static/js/main.bc152e22.js.map",
     "651.0b12483f.chunk.js.map": "/static/js/651.0b12483f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d6e44cf.css",
-    "static/js/main.2ed74f21.js"
+    "static/css/main.1992b60f.css",
+    "static/js/main.bc152e22.js"
   ]
 }
