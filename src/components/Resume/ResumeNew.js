@@ -18,7 +18,7 @@ function ResumeNew() {
     <div className="resume-content" style={{ textAlign: 'center' }}>
       <div className="resume" style={{ 
         display: 'inline-block', 
-        width: '150%', 
+        width: '190%', 
         height: '600px',
         marginBottom: '3rem'
       }}>
@@ -27,64 +27,28 @@ function ResumeNew() {
           src={googleDocViewUrl}
           width="100%"
           height="100%"
-          style={{ border: '1px solid #ccc', borderRadius: '8px' }}
+          style={{ border: '1px solid #ccc', borderRadius: '10px' }}
         ></iframe>
       </div>
-      <div style={{ textAlign: 'left', paddingLeft: '7rem' }}>  {/* Added left alignment and padding */}
-        <Button variant="outline-primary" onClick={onButtonClick}>
-          Download Resume
-        </Button>
-      </div>
+      <div style={{ textAlign: 'left', paddingLeft: '15rem' }}>
+  <Button 
+    variant="outline-primary" 
+    onClick={onButtonClick}
+    style={{ 
+      padding: '0.25rem 0.75rem',  
+      fontSize: '1.2rem',         
+      height: '36px',              
+      minWidth: '120px'            
+    }}
+  >
+    Download Resume
+  </Button>
+</div>
+
     </div>
   );
 }
 
 export default ResumeNew;
-
-// import React from "react";
-// import Button from 'react-bootstrap/Button';
-// import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-// import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-// import pdfFile from "../../Assets/abdi_resume.pdf"
-// function ResumeNew() {
-//   const onButtonClick =async () => {
-//     try{
-//       const response = await fetch('hope_resume.pdf')
-
-//       if(!response.ok)
-//       {
-//         throw new Error("Failed to fetch PDF");
-//       }
-//       const blob = await response.blob();
-//       const fileURL = URL.createObjectURL(blob);
-//       const downloadLink = document.createElement('a');
-//       downloadLink.href = fileURL;
-//       downloadLink.download = 'hope_resume.pdf';
-//       downloadLink.click();
-//       URL.revokeObjectURL(fileURL);
-//     }
-//     catch(error){
-//       return error;
-//     }
-// }
-//   return (
-//    <div className="resume-content">
-//      <div className="resume">
-      
-//       <Document file={pdfFile}>
-//                 <Page pageNumber={1} />
-//                 <Page pageNumber={2}/>
-//       </Document>
-            
-     
-//     </div>
-
-//     <Button variant="outline-primary" onClick={onButtonClick}>Download Resume</Button>{' '}
-
-//    </div>
-//   );
-// }
-
-// export default ResumeNew;
 
 

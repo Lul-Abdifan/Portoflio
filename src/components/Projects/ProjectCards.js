@@ -1,43 +1,4 @@
-// import React from "react";
-// import Card from "react-bootstrap/Card";
-// import Button from "react-bootstrap/Button";
-// import { CgWebsite } from "react-icons/cg";
-// import { BsGithub } from "react-icons/bs";
 
-// function ProjectCards(props) {
-//   return (
-//     <Card className="project-card-view">
-//       <Card.Img className="card-img" variant="top" src={props.imgPath} alt="card-img" />
-//       <Card.Body>
-//         <Card.Title>{props.title}</Card.Title>
-//         <Card.Text className="card-description" style={{ textAlign: "justify" }}>
-//           {props.description}
-//         </Card.Text>
-//         <Button variant="primary" href={props.ghLink} target="_blank">
-//           <BsGithub /> &nbsp;
-//           {props.isBlog ? "Blog" : "GitHub"}
-//         </Button>
-//         {"\n"}
-//         {"\n"}
-
-//         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-//         {!props.isBlog && props.demoLink && (
-//           <Button
-//             variant="primary"
-//             href={props.demoLink}
-//             target="_blank"
-//             style={{ marginLeft: "10px" }}
-//           >
-//             <CgWebsite /> &nbsp;
-//             {"Demo"}
-//           </Button>
-//         )}
-//       </Card.Body>
-//     </Card>
-//   );
-// }
-// export default ProjectCards;
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -45,6 +6,9 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
 function ProjectCards(props) {
+  const formattedDescription =
+    props.description.charAt(0).toUpperCase() + props.description.slice(1);
+
   return (
     <>
       <style>{`
@@ -110,7 +74,7 @@ function ProjectCards(props) {
         <Card.Img className="card-img-top" variant="top" src={props.imgPath} alt="card-img" />
         <Card.Body className="card-body-flex">
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text className="card-description">{props.description}</Card.Text>
+          <Card.Text className="card-description">{formattedDescription}</Card.Text>
 
           <div className="card-buttons">
             <Button variant="primary" href={props.ghLink} target="_blank" rel="noreferrer">
@@ -135,3 +99,4 @@ function ProjectCards(props) {
 }
 
 export default ProjectCards;
+
