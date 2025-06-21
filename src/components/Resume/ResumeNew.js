@@ -52,7 +52,7 @@ function ResumeNew() {
         width: "100%",
         maxWidth: "700px",
         height: "80vh",
-        marginTop: "1rem",
+        marginTop: "2rem",
       }
     : {
         width: "100%",
@@ -64,6 +64,7 @@ function ResumeNew() {
 
   const buttonStyle = {
     fontSize: "1rem",
+    marginTop: "2rem",
    
   };
 
