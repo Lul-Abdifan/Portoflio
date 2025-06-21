@@ -1,54 +1,94 @@
 
-
-import React from "react";
-import Button from 'react-bootstrap/Button';
+import React, { useEffect, useState } from "react";
+import Button from "react-bootstrap/Button";
 
 function ResumeNew() {
-  // Google Docs preview link
-  const googleDocViewUrl = "https://docs.google.com/document/d/1jWrF337N1EBOHrDiAVrl1IbHuXuVLZvyImOQhTt9c9E/preview";
+  const googleDocViewUrl =
+    "https://docs.google.com/document/d/1jWrF337N1EBOHrDiAVrl1IbHuXuVLZvyImOQhTt9c9E/preview";
 
-  // Google Docs direct PDF download link
-  const googleDocDownloadUrl = "https://docs.google.com/document/d/1jWrF337N1EBOHrDiAVrl1IbHuXuVLZvyImOQhTt9c9E/export?format=pdf";
+  const googleDocDownloadUrl =
+    "https://docs.google.com/document/d/1jWrF337N1EBOHrDiAVrl1IbHuXuVLZvyImOQhTt9c9E/export?format=pdf";
 
-  const onButtonClick = () => {
-    window.open(googleDocDownloadUrl, "_blank");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // set initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const containerStyle = {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    
+  };
+
+  const buttonWrapperStyle = isMobile
+    ? {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        marginTop: "3rem",
+        paddingRight: 0,
+      }
+    : {
+        width: "100%",
+        maxWidth: "900px",
+        display: "flex",
+        justifyContent: "flex-end",
+        marginTop: "7rem",
+        marginRight: "-100px",
+        position: "relative",
+      };
+
+  const iframeWrapperStyle = isMobile
+    ? {
+        width: "100%",
+        maxWidth: "700px",
+        height: "80vh",
+        marginTop: "1rem",
+      }
+    : {
+        width: "100%",
+        maxWidth: "700px",
+        height: "80vh",
+        marginTop: "-2rem",
+        marginRight: "100px",
+      };
+
+  const buttonStyle = {
+    fontSize: "1rem",
+   
   };
 
   return (
-    <div className="resume-content" style={{ textAlign: 'center' }}>
-      <div className="resume" style={{ 
-        display: 'inline-block', 
-        width: '190%', 
-        height: '600px',
-        marginBottom: '3rem'
-      }}>
+    <div style={containerStyle}>
+      {/* Download Button */}
+      <div style={buttonWrapperStyle}>
+        <Button variant="outline-primary" onClick={() => window.open(googleDocDownloadUrl, "_blank")} style={buttonStyle}>
+          Download Resume
+        </Button>
+      </div>
+
+      {/* Resume Preview */}
+      <div style={iframeWrapperStyle}>
         <iframe
           title="Google Doc Resume"
           src={googleDocViewUrl}
           width="100%"
           height="100%"
-          style={{ border: '1px solid #ccc', borderRadius: '10px' }}
+          style={{ border: "none" }}
         ></iframe>
       </div>
-      <div style={{ textAlign: 'left', paddingLeft: '15rem' }}>
-  <Button 
-    variant="outline-primary" 
-    onClick={onButtonClick}
-    style={{ 
-      padding: '0.25rem 0.75rem',  
-      fontSize: '1.2rem',         
-      height: '36px',              
-      minWidth: '120px'            
-    }}
-  >
-    Download Resume
-  </Button>
-</div>
-
     </div>
   );
 }
 
 export default ResumeNew;
-
 
